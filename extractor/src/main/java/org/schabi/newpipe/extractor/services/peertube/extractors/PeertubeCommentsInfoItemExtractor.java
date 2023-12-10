@@ -136,7 +136,7 @@ public class PeertubeCommentsInfoItemExtractor implements CommentsInfoItemExtrac
             // is also structured like a JsonObject.
             final JsonObject pageContent = new JsonObject();
             pageContent.put(CHILDREN, children);
-                return new Page(repliesUrl, threadId,
+            return new Page(repliesUrl, threadId,
                      JsonWriter.string(pageContent).getBytes(UTF_8));
         }
         return new Page(repliesUrl, threadId);
