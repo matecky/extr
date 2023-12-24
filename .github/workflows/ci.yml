@@ -6,7 +6,6 @@ on:
     branches:
       - dev
       - master
-      - Backport-Use-immutable-Map-factory-methods.-to-Java
   pull_request:
 
 jobs:
