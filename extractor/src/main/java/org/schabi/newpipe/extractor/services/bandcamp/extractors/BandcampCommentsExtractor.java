@@ -22,6 +22,8 @@ import org.schabi.newpipe.extractor.linkhandler.ListLinkHandler;
 import org.schabi.newpipe.extractor.utils.JsonUtils;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -67,7 +69,7 @@ public class BandcampCommentsExtractor extends CommentsExtractor {
 
         final String trackId = getTrackId();
         final String token = getNextPageToken(reviews);
-        return new InfoItemsPage<>(collector, new Page(List.of(trackId, token)));
+        return new InfoItemsPage<>(collector, new Page(Arrays.asList(trackId, token)));
     }
 
     @Override
@@ -92,7 +94,7 @@ public class BandcampCommentsExtractor extends CommentsExtractor {
         }
 
         return new InfoItemsPage<>(collector,
-                new Page(List.of(trackId, getNextPageToken(reviews))));
+                new Page(Arrays.asList(trackId, getNextPageToken(reviews))));
     }
 
     private JsonObject fetchReviewsData(final String trackId, final String token)
