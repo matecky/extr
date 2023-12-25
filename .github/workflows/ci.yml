@@ -6,7 +6,6 @@ on:
     branches:
       - dev
       - master
-      - Revert-Java-9-usage-with-Java-8-equivalent
   pull_request:
 
 jobs:
